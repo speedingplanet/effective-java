@@ -5,8 +5,6 @@
 In `org.efjava.labs`, we have four classes: `Media`, the parent type for `Book` and `Movie`; as well
 as `Library` which will be a custom container for `Media`. 
 
-### Generics Lab
-
 1. Build out classes: 
    1. `Media` to have a `creator` and a `title`. Add a constructor, getter, setter, etc.
    2. Build out `Book` to have an `author` and a `title`. The `author` should map to `Media`'s 
@@ -22,7 +20,8 @@ as `Library` which will be a custom container for `Media`.
    2. Test `remove` to make sure that both a `Book` and a `Movie` could be removed
    3. Create a `Library` of `Book`s. Call `asList`, passing in a `Collection<Media>`
 
-### Optionals Lab
+## Optionals Lab
+
 1. Add two methods to `Library`:
    1. `findByCreator` should take a `String` as an argument and return an `Optional`
    2. `findByTitle` should take a `String` as an argument and return an `Optional`
