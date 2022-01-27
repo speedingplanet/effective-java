@@ -21,7 +21,7 @@ public class LombokHamcrestTest {
   @Test
   public void createInstance() {
     LombokHamcrest lh =
-      new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
+        new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
     assertTrue(lh instanceof LombokHamcrest);
     assertNotNull(lh);
     assertEquals(lh.getName(), "John Paxton");
@@ -30,7 +30,7 @@ public class LombokHamcrestTest {
   @Test
   public void createInstanceHamcrest() {
     LombokHamcrest lh =
-      new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
+        new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
     assertThat(lh, isA(LombokHamcrest.class));
     assertThat(lh, notNullValue());
     assertThat(lh.getName(), is("John Paxton"));
@@ -39,20 +39,20 @@ public class LombokHamcrestTest {
   @Test
   public void checkEquals() {
     LombokHamcrest lh1 =
-      new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
+        new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
     LombokHamcrest lh2 =
-      new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
-    assertNotSame(lh1, lh2);
-    assertEquals(lh1, lh2);
+        new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
+    assertNotSame(lh1, lh2); // lh1 != lh2
+    assertEquals(lh1, lh2);  // lh1.equals(lh2) == true
   }
 
   @Test
   public void checkEqualsHamcrest() {
     LombokHamcrest lh1 =
-      new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
+        new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
     LombokHamcrest lh2 =
-      new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
+        new LombokHamcrest("John Paxton", LocalDate.of(1974, 1, 31), 4);
     assertThat(lh1, not(sameInstance(lh2)));
-    assertThat(lh1, is(lh2));
+    assertThat(lh1, is(lh2)); // lh1.equals(lh2) == true
   }
 }
