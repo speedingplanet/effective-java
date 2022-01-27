@@ -1,6 +1,6 @@
 # Effective Java Labs
 
-## Generics Labs
+## Generics Lab
 
 In `org.efjava.labs`, we have four classes: `Media`, the parent type for `Book` and `Movie`; as well
 as `Library` which will be a custom container for `Media`. 
@@ -13,7 +13,7 @@ as `Library` which will be a custom container for `Media`.
       to `Media`'s `creator`. Add a constructor, getters, and setters
 2. Build `Library`. In particular: 
    1. It should have `add` and `remove` methods. These methods should be
-      able to add and remove anything that is `Media` or one of its subtypes
+      able to add and remove anything that is the generic type for the library
    2. Include an `asList` method, taking an argument of a destination collection
 3. Write tests for `Library`. Specifically:
    1. Test `add` to make sure that both a `Book` and a `Movie` could be added
