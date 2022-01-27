@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 
 public class CollectionUtilities {
 
@@ -19,10 +20,33 @@ public class CollectionUtilities {
   6: 1
   7: 4
    */
-
   public static <T> Map<T, Integer> frequencyAnalyzer(T[] numbers) {
     Map<T, Integer> frequency = new HashMap<>();
-    for (T i: numbers) {
+    for (T i : numbers) {
+      if (frequency.containsKey(i)) {
+        frequency.put(i, frequency.get(i) + 1);
+      } else {
+        frequency.put(i, 1);
+      }
+    }
+    return frequency;
+  }
+
+  // public static int itemsInCommon(Set s1, Set s2) {
+  public static int itemsInCommon(Set<?> s1, Set<?> s2) {
+    int commonCount = 0;
+    for (Object item : s1) {
+      if (s2.contains(item)) {
+        commonCount++;
+      }
+    }
+
+    return commonCount;
+  }
+
+  public static Map<?, Integer> frequencyAnalyzerZhe(Object[] numbers) {
+    Map<Object, Integer> frequency = new HashMap<>();
+    for (Object i : numbers) {
       if (frequency.containsKey(i)) {
         frequency.put(i, frequency.get(i) + 1);
       } else {

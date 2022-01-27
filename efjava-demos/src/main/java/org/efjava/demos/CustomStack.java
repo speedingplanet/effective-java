@@ -18,7 +18,7 @@ public class CustomStack<E> {
   // but again, no direct access to same
   @SuppressWarnings("unchecked")
   public CustomStack() {
-    // Breaks
+    // Breaks at compile time (thankfully)
     // elements = new E[DEFAULT_INITIAL_CAPACITY];
 
     // Better

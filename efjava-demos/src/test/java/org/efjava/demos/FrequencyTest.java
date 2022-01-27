@@ -26,4 +26,15 @@ public class FrequencyTest {
     assertEquals(results.get("a"), Integer.valueOf(1));
     assertEquals(results.get("b"), Integer.valueOf(2));
   }
+
+  /*
+  @Test
+  public void zheTest() {
+    String[] letters = { "a", "b", "b", "c", "c", "d", "d", "d" };
+    Map<String, Integer> results = CollectionUtilities.frequencyAnalyzerZhe(letters);
+
+    assertEquals(results.get("a"), Integer.valueOf(1));
+    assertEquals(results.get("b"), Integer.valueOf(2));
+  }
+  */
 }

@@ -36,6 +36,11 @@ public class GenericsExamples {
     unboundedlist.add(null);
   }
 
+  /*
+  List<Number> is a subtype of Collection<Number>
+  List<Integer> is NOT a subtype of Collection<Number> or List<Number>
+   */
+
   @Test
   public void pushAllInvariantTest() {
     CustomStack<Number> stack = new CustomStack<>();
