@@ -1,4 +1,4 @@
-package org.efjava;
+package org.efjava.demos;
 
 import org.junit.After;
 import org.junit.AfterClass;

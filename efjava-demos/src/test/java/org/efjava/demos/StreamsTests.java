@@ -1,4 +1,4 @@
-package org.efjava;
+package org.efjava.demos;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -28,6 +28,7 @@ public class StreamsTests {
     names.stream().forEach(System.out::println);
   }
 
+  @SuppressWarnings({"Convert2MethodRef"})
   @Test
   public void streamAndLambdaIteration() {
     names.stream().forEach(name -> System.out.println(name));

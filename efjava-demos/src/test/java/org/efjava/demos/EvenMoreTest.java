@@ -1,4 +1,4 @@
-package org.efjava;
+package org.efjava.demos;
 
 import org.junit.Ignore;
 import org.junit.Test;
