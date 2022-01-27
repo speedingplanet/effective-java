@@ -29,6 +29,7 @@ public class LibraryTest {
     Book removedGatsby = books.remove(gatsby);
     assertThat(removedGatsby, notNullValue());
     assertThat(removedGatsby, is(gatsby));
+    assertThat(books.size(), is(0));
   }
 
   @Test

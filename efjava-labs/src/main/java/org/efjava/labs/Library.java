@@ -8,6 +8,7 @@ public class Library<T> {
   private int size = 0;
   private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
+  /* Explain why this doesn't need to be checked here */
   @SuppressWarnings("unchecked")
   public Library() {
     items = (T[]) new Object[DEFAULT_INITIAL_CAPACITY];
@@ -23,7 +24,7 @@ public class Library<T> {
     for(int x = 0; x < items.length; x++) {
       if (items[x].equals(item)) {
         // Oh no, a sparse array
-        items[x] = null;
+        items[x] = null; // [item, null, item, item, item, null, null]
         return item;
       }
     }
